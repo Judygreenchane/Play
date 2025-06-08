@@ -15,8 +15,31 @@ internal class Game
 
     private void Play()
     {
-        // ToDo : Read from  cff Config may be
-        throw new NotImplementedException();
+        bool gameInProgress=true;
+        do
+        {
+          DrawMap();
+          Console.ReadKey();
+        } 
+        while (gameInProgress);
+       
+    }
+
+    private void DrawMap()
+    {
+        Console.Clear();
+        for (int y = 0; y < map.Height; y++)
+        {
+            for (int x = 0; x < map.Width; x++)
+            {
+            Cell? cell = map.GetCell(y, x);
+                //ToDo : Handle null
+                Console.ForegroundColor=cell.Color;
+                Console.Write(cell.Symbol);
+            }
+            Console.WriteLine();
+        }
+        Console.ForegroundColor = ConsoleColor.Gray;
     }
 
     private void Initialize()
