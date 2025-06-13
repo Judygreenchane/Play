@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-    internal class Creature
+    internal class Creature : IDrawable
     {
         public Cell Cell { get; }
         public string Symbol { get; }
