@@ -1,6 +1,9 @@
-﻿internal class Hero
+﻿namespace Play.Entities
+{ 
+internal class Hero : Creature
 {
-    public Hero()
+    public Hero(Cell cell) : base(cell,"H ")
     {
     }
+}
 }

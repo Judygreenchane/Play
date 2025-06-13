@@ -1,6 +1,7 @@
 ﻿
 using System.Diagnostics;
 
+
 internal class Map
 {
     private Cell[,] cells;
