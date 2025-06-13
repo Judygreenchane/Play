@@ -47,7 +47,7 @@ internal class Game
     {
         // ToDo : Read from Config may be
          map=new Map(width: 10,height:10);
-        var heroCell = map.GetCell(0, 0);
+        Cell heroCell = map.GetCell(0, 0);
          hero = new Hero(heroCell);
 
     }
